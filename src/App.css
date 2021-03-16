@@ -1,3 +1,7 @@
+body {
+  background-color: #fafafa;
+}
+
 li {
   padding-left: 0;
   list-style: none;
@@ -5,6 +9,18 @@ li {
 
 .App {
   text-align: center;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 16px;
+  width: 60%;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
 .nav {
@@ -29,6 +45,25 @@ li {
 .filter button {
   margin-right: 12px;
   margin-left: 12px;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.todos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 70%;
+  margin: 12px 0;
+  border-radius: 4px;
+  background-color: #fff000;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function Todo({ todo: t }) {
   const [todo, setTodo] = useState(t);
-  const [isComplete, setIsComplete] = useState(false);
+  const [isComplete, setIsComplete] = useState(todo.isComplete);
 
   const onClickComplete = () => {
     fetch(`http://localhost:3001/todos/${todo.id}`, {
@@ -18,6 +18,7 @@ function Todo({ todo: t }) {
       if (res.ok) {
         setIsComplete(!isComplete);
       }
+      console.log(isComplete);
     });
   };
 
@@ -39,9 +40,12 @@ function Todo({ todo: t }) {
 
   return (
     <li>
-      {todo.todo}
-      <button onClick={onClickComplete}>{todo.isComplete ? "완료됨" : "남음"}</button>
-      <button onClick={delTodo}>삭제</button>
+      <div className="todo-content">
+        {todo.todo}
+        <input type="checkbox" checked={isComplete} onChange={onClickComplete} />
+        <button onClick={delTodo}>삭제</button>
+      </div>
+      <div className="todo-detail">{todo.detail}</div>
     </li>
   );
 }

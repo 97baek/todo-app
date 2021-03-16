@@ -7,16 +7,16 @@
       "isComplete": true
     },
     {
-      "id": 4,
-      "todo": "씻기",
-      "detail": "자기 전에 씻기",
-      "isComplete": true
-    },
-    {
       "todo": "저녁먹기",
       "detail": "저녁을 먹자",
-      "isComplete": true,
+      "isComplete": false,
       "id": 5
+    },
+    {
+      "todo": "과제하기",
+      "detail": "밀린과제",
+      "isComplete": false,
+      "id": 6
     }
   ]
 }

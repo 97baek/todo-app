@@ -8,12 +8,14 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/todolist">
-          <TodoList />
-        </Route>
-        <Route path="/addtodo">
-          <AddTodo />
-        </Route>
+        <section className="contents">
+          <Route path="/todolist">
+            <TodoList />
+          </Route>
+          <Route path="/addtodo">
+            <AddTodo />
+          </Route>
+        </section>
       </Switch>
     </BrowserRouter>
   );
